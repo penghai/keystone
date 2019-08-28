@@ -1,0 +1,4 @@
+---
+# tasks file for roles/keystone
+
+- include: config_db.yml

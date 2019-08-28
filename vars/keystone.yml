@@ -1,0 +1,4 @@
+
+keystone_db_name: keystone
+keystone_db_user: keystone
+keystond_db_password: keystone
