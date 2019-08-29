@@ -1,4 +1,8 @@
 ---
 # tasks file for roles/keystone
 
+- include: install.yml
+
 - include: config_db.yml
+
+- include: init_keystone.yml
