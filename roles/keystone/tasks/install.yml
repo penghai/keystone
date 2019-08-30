@@ -4,6 +4,9 @@
       - openstack-keystone
       - httpd
       - mod_wsgi
+      - python-openstackclient-doc
+      - openstack-selinux
+      - openstack-utils
     state: present
 
 - name: config keystone.conf
@@ -18,3 +21,4 @@
   with_items:
     - { src: httpd.conf, dest: /etc/httpd/conf/httpd.conf }
     - { src: wsgi-keystone.conf, dest: /etc/httpd/conf.d/wsgi-keystone.conf }  
+  notify: restart httpd
