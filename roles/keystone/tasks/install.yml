@@ -22,3 +22,9 @@
     - { src: httpd.conf, dest: /etc/httpd/conf/httpd.conf }
     - { src: wsgi-keystone.conf, dest: /etc/httpd/conf.d/wsgi-keystone.conf }  
   notify: restart httpd
+
+- name: Start the Apache HTTP service and configure it to start when the system boots
+  service:
+    name: httpd
+    state: started 
+    enabled: true
